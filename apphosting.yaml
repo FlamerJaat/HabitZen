@@ -1,0 +1,59 @@
+# Settings to manage and configure a Firebase App Hosting backend.
+# https://firebase.google.com/docs/app-hosting/configure
+
+# Specifies the node version to use.
+runtime: nodejs20
+
+# The command to start your web server.
+entrypoint: npm run start
+
+# Settings for App Hosting's server-side rendering support.
+# ssr:
+  # The script to run to build your app.
+  # build: npm run build
+  # The directory that contains your app's static files.
+  # staticDirectory: .next
+
+# The following are commented out by default, but can be uncommented to
+# configure your backend. For more details, see the App Hosting docs.
+
+# cpu: 1
+# memoryMiB: 512
+
+# runConfig:
+  # The number of server instances to run for your app.
+  # minInstances: 0
+  # The maximum number of server instances to run for your app.
+  # maxInstances: 10
+  # The maximum number of concurrent requests to send to a single server
+  # instance.
+  # concurrency: 80
+
+# Excludes files from your build.
+# exclude:
+# - .firebase/**
+# - .firebaserc
+# - firebase.json
+# - node_modules/**
+
+# Defines environment variables for your backend.
+# env:
+# - variable: API_KEY
+#   value: your-api-key
+# - variable: FIREBASE_CONFIG
+#   value: your-firebase-config
+# - variable: CRON_SECRET
+#   secret: CRON_SECRET
+
+# Defines scheduled jobs to run at a specified frequency.
+# scheduler:
+#   - id: send-reminders
+#     # Runs the job every 5 minutes.
+#     schedule: '*/5 * * * *'
+#     # The timezone to use for the schedule.
+#     # timezone: 'America/Los_Angeles'
+#     httpTarget:
+#       # The path to the endpoint to run.
+#       path: /api/send-reminders
+#       # The cron secret to use for the job.
+#       cronSecret: projects/studio-8569249950-7e375/secrets/CRON_SECRET
